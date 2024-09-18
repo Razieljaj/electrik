@@ -15,6 +15,5 @@
     <a type="button" class="button button1">Moyen</a>
     <a type="button" class="button button1">Polytechnique</a>
   </div>
-
 </body>
 </html>
