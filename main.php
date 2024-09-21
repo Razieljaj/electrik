@@ -11,9 +11,9 @@
 <h1 class = "titre">Escape game</h1>
   <p class = 'choix'>Choisissez la difficulté:</p>
   <div class="difficulte">
-    <a type="button" class="button button1">Gueux</a>
-    <a type="button" class="button button2">Moyen</a>
-    <a type="button" class="button button3">Polytechnique</a>
+    <a type="button" class="button button1" href='bouton/bouton.php'>Gueux</a>
+    <a type="button" class="button button2" href='bouton/bouton.php'>Moyen</a>
+    <a type="button" class="button button3" href='bouton/bouton.php'>Polytechnique</a>
   </div>
   <img src="image\eel\eel-content.png" class="eel-content">
 </body>

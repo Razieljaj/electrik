@@ -1,7 +1,7 @@
 body {
     width: 90%;
     height: 99%;
-    background-image: url('image/les images superficielles.png');
+    background-image: url('image/background/les images superficielles.png');
     background-repeat: no-repeat;
     background-position-x: center;
     color: rgb(246, 255, 197);
@@ -10,7 +10,35 @@ body {
     display: grid;
     grid-gap: 20%;
     margin-right: 0px;
+    text-decoration: none;
+    color: rgb(246, 255, 197);
   }
+
+  a:link {
+    text-decoration: none;
+    color: rgb(246, 255, 197);
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: rgb(246, 255, 197);
+  }
+  
+  a:focus {
+    text-decoration: none;
+    color: rgb(246, 255, 197);
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: rgb(246, 255, 197);
+  }
+  
+  a:active {
+      text-decoration: none;
+    color: rgb(246, 255, 197);
+  }
+
   .button {
     border: 3px solid  #00ccff;
     background-image:radial-gradient(circle, rgba(29,59,213,1) 0%, rgba(0,204,255,1) 100%);
@@ -21,6 +49,7 @@ body {
     padding-left: 30px;
     border-radius: 150px 5px;
     transition: 0.3s;
+    rotate: 5deg;
   }
 
   .button1 {
@@ -42,6 +71,7 @@ body {
 
   .button:active{
     margin-top: 20px;
+    rotate : 0deg
   }
 
   @keyframes entree {
@@ -70,11 +100,11 @@ body {
   }
   
   .titre{
-    padding-left: 100px ;
+    padding-top: 125px;
   }
 
   .choix{
-    padding-left: 150px;
+    padding-left: 50px;
   }
   .titre,.choix{
     rotate: -30deg;
