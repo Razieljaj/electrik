@@ -3,27 +3,41 @@ body {
     height: 99%;
     background-image: url('image/les images superficielles.png');
     background-repeat: no-repeat;
-    color: aliceblue;
+    background-position-x: center;
+    color: rgb(246, 255, 197);
   }
   .difficulte {
     display: grid;
     grid-gap: 20%;
+    margin-right: 0px;
   }
   .button {
-    border: 3px solid rgb(168, 168, 43);
-    background-color: linear-gradient(45deg, #4e00ff, #00ccff);
-    color: rgb(1, 26, 63);
-    text-align: center;
-    margin-left: 40%;
-    margin-right: 40%;
-    border-radius: 250px 5px;
+    border: 3px solid  #00ccff;
+    background-image:radial-gradient(circle, rgba(29,59,213,1) 0%, rgba(0,204,255,1) 100%);
+    text-align: 20%;
+    margin-left: 65%;
+    margin-right: -30%;
+    margin-top: 5%;
+    padding-left: 30px;
+    border-radius: 150px 5px;
+    transition: 0.3s;
+  }
+
+  .button1 {
+    animation : entree 0.5s 1 ease-in-out running;
+  }
+
+  .button2 {
     animation : entree 1s 1 ease-in-out running;
-    transition: 2s;
+  }
+
+  .button3{
+    animation : entree 1.5s 1 ease-in-out running;
   }
 
 
   .button:hover {
-    margin-right: 40%;
+    margin-right: 10%;
   }
 
   .button:active{
@@ -33,32 +47,56 @@ body {
   @keyframes entree {
 
     0%{
-        transform: translateY(-300px);
+        transform: translateX(300px);
     }
 
     20%{
-        transform: translateY(-50px);
+        transform: translateX(50px);
     }
     40%{
-        transform: translateY(-25px);
+        transform: translateX(25px);
     }
     60%{
-        transform: translateY(-10px);
+        transform: translateX(10px);
     }
 
     80%{
-        transform: translateY(-5px);
+        transform: translateX(5px);
     }
     100%{
-        transform: translateY(0px);
+        transform: translateX(0px);
     }
 
   }
   
-  h1{
+  .titre{
     padding-left: 100px ;
   }
 
-  p{
+  .choix{
     padding-left: 150px;
+  }
+  .titre,.choix{
+    rotate: -30deg;
+    animation: tombee 0.5s ease-in 1 running;
+  }
+
+  @keyframes tombee {
+    0%{
+      rotate: 0deg;
+  }
+  50%{
+    rotate: -10deg;
+  }
+  100%{
+    rotate: -30deg;
+  }
+  }
+
+  .eel-content{
+    max-width: 30%;
+    animation: entree 0.5s ease-in 1 running;
+    position: absolute;
+    top: 60%;
+    left: 60%;
   }
