@@ -40,13 +40,14 @@ body {
   }
 
   .button {
-    border: 3px solid  #00ccff;
     background-image:radial-gradient(circle, rgba(29,59,213,1) 0%, rgba(0,204,255,1) 100%);
     text-align: 20%;
     margin-left: 65%;
     margin-right: -30%;
     margin-top: 5%;
     padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 150px 5px;
     transition: 0.3s;
     rotate: 5deg;
