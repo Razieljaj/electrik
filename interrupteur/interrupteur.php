@@ -13,7 +13,7 @@
                 <div class="handle"></div>
             </div>
             <div class="warning">
-                <p>Danger : Zone Nucléaire</p>
+                <p>Danger : High voltage</p>
             </div>
         </div>
     </div>
