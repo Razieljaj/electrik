@@ -1,0 +1,35 @@
+body {
+    width: 90%;
+    background-color: #101318;
+    background-image: url('image/background/les images superficielles.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    color: rgb(246, 255, 197);
+    height: 90%;
+    margin: 0;
+  }
+
+.dialogue{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top: 40%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .dialogue_text{
+    margin: 10%;
+    padding: 10%;
+    background-color: rgba(200, 229, 255, 0.6);
+    color : black;
+    border: solid #3333ff;
+    box-shadow: 4px 2px 200px#3333ff;
+    text-align: left;
+  }
+
+  .eel-content{
+    max-width: 30%;
+    max-width : 100%;
+    height : auto;
+
+  }

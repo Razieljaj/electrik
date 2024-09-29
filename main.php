@@ -15,6 +15,13 @@
     <a type="button" class="button button2" href='interrupteur/interrupteur.php'>Moyen</a>
     <a type="button" class="button button3" href='interrupteur/interrupteur.php'>Polytechnique</a>
   </div>
-  <img src="image\eel\eel-content.png" class="eel-content">
+
+  <div class = "dialogue">
+  <p class = dialogue_text>Greeting workerz,
+</br>
+I should say :</br> Salutations, j'avais oublié que vous n'étiez que des se formant, qui n’ont pas la maîtrise absolue de la langue anglaise, dont le destin est de devenir des  </br> <a class = "voltdiver">“Voltdivers”<a>
+  </p>
+  <img src="image\eel\eel.webp" class="eel-content">
+  </div>
 </body>
 </html>
