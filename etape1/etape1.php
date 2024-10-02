@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Première étape</title>
 </head>
 <body>
-<div class = "dialogue">
-  <p class = dialogue_text> Je dis Hagrah, hagrah</p>
-  <img src="..\image\eel\eel.webp" class="eel-content">
-  </div>
+    <h1>VOUS ETES MOCHES</h1>
 </body>
 </html>

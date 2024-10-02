@@ -11,9 +11,9 @@
 <h1 class = "titre">Escape game</h1>
   <p class = 'choix'>Choisissez la difficulté:</p>
   <div class="difficulte">
-    <a type="button" class="button button1" href='interrupteur/interrupteur.php'>Gueux</a>
-    <a type="button" class="button button2" href='interrupteur/interrupteur.php'>Moyen</a>
-    <a type="button" class="button button3" href='interrupteur/interrupteur.php'>Polytechnique</a>
+    <a type="button" class="button button1" href='certif/certif.php'>Gueux</a>
+    <a type="button" class="button button2" href='certif/certif.php'>Moyen</a>
+    <a type="button" class="button button3" href='certif/certif.php'>Polytechnique</a>
   </div>
 
   <div class = "dialogue">
