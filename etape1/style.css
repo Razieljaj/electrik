@@ -1,21 +1,128 @@
-/* CSS pour rendre les zones visibles */
-.zone {
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #101318;
+}
+
+
+.puzzle-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 4/3;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.button{
+    background-image: radial-gradient(circle, rgba(29, 59, 213, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    border: none;
+    margin: 10%;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: aliceblue;
+}
+/* Indicateurs */
+.drop-zone {
     position: absolute;
-    border: 2px solid red; /* Pour rendre la zone visible */
+    width: 12.5%;
+    height: 12.5%;
+    border: 2px dashed #666;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
-/* Positionner les zones de manière absolue sur l'image */
-#zone1 {
-    top: 100px;
-    left: 100px;
-    width: 100px;
-    height: 100px;
+#zone1 { top: 20%; left: 15%; }
+#zone2 { top: 45%; left: 50%; }
+#zone3 { top: 70%; left: 70%; }
+
+/* Pièces du puzzle */
+.pieces-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.drop-zone img {
+    width: 100%; /* S'assurer que l'image prend toute la largeur de la zone de dépôt */
+    height: 100%; /* S'assurer que l'image prend toute la hauteur de la zone de dépôt */
+    object-fit: cover; /* Remplir la zone tout en maintenant le ratio d'aspect */
+}
+.selectable {
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    flex-grow: 1;
 }
 
-#zone2 {
-    top: 300px;
-    left: 300px;
-    width: 150px;
-    height: 100px;
+.selectable.selected {
+    border-color: rgb(238, 53, 53);
+    box-shadow: rgb(250, 78, 78) 5px 2px 5px;
 }
+
+
+/* Zone pour placer les images */
+.bottom-panel {
+    margin-top: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .puzzle-container {
+        width: 90%;
+    }
+
+    .selectable, .drop-zone {
+        width: 18%;
+        height: 18%;
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle-container {
+        width: 100%;
+    }
+
+    .selectable, .drop-zone {
+        width: 25%;
+        height: 25%;
+    }
+}
+.dialogue {
+    display: flex; /* Utiliser flexbox pour une disposition plus réactive */
+    flex-direction: left; /* Aligner les éléments verticalement sur mobile */
+    align-items: center; /* Centrer horizontalement */
+    margin-top: 20%; /* Ajuster pour éviter que le contenu soit trop en haut */
+    text-align: center;
+  }
+  
+  .dialogue_text {
+    width: 90%; /* Utiliser une largeur relative pour s'adapter à la taille de l'écran */
+    max-width: 600px; /* Limiter la largeur maximale pour les grands écrans */
+    margin: 10px auto; /* Centrer le texte avec un espace autour */
+    padding: 10px;
+    background-color: rgba(200, 229, 255, 0.6);
+    color: black;
+    border: solid #3333ff;
+    box-shadow: 4px 2px 50px #3333ff;
+    text-align: left;
+  }
+  
+  .eel-content {
+    max-width: 80%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
+    height: auto;
+  }

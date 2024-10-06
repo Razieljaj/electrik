@@ -1,18 +1,20 @@
 body {
-  width: 90%;
+  width: 100%; /* Utiliser 100% pour que le corps s'étende à toute la largeur */
   background-color: #101318;
   background-image: url('image/background/les images superficielles.png');
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position: center;
   color: rgb(246, 255, 197);
-  height: 90%;
+  height: 100vh; /* Utiliser 100vh pour s'assurer que le corps remplit toute la hauteur de la fenêtre */
   margin: 0;
+  overflow-x: hidden; /* Éviter le débordement horizontal */
 }
 
 .difficulte {
   display: grid;
-  grid-gap: 20%;
-  margin-right: 0px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adapter les boutons à la largeur de l'écran */
+  grid-gap: 20px; /* Espace entre les boutons */
+  margin: 20px; /* Marges pour éviter le contact avec le bord de l'écran */
   text-decoration: none;
   color: rgb(246, 255, 197);
 }
@@ -107,12 +109,12 @@ a:active {
 }
 
 .titre {
-  padding-top: 125px;
+  padding-top: 10px; /* Ajuster le padding pour les mobiles */
   animation: tombee 0.5s ease-in 1 running;
 }
 
 .choix {
-  padding-left: 50px;
+  padding: 10px; /* Ajuster le padding pour les mobiles */
   animation: electric-flicker 1s ease infinite;
 }
 
@@ -137,28 +139,28 @@ a:active {
 }
 
 .dialogue {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  margin-top: 40%;
+  display: flex; /* Utiliser flexbox pour une disposition plus réactive */
+  flex-direction: column; /* Aligner les éléments verticalement sur mobile */
+  align-items: center; /* Centrer horizontalement */
+  margin-top: 20%; /* Ajuster pour éviter que le contenu soit trop en haut */
   text-align: center;
-  align-items: center;
 }
 
 .dialogue_text {
-  margin: 10%;
-  padding: 10%;
+  width: 90%; /* Utiliser une largeur relative pour s'adapter à la taille de l'écran */
+  max-width: 600px; /* Limiter la largeur maximale pour les grands écrans */
+  margin: 10px auto; /* Centrer le texte avec un espace autour */
+  padding: 10px;
   background-color: rgba(200, 229, 255, 0.6);
   color: black;
   border: solid #3333ff;
-  box-shadow: 4px 2px 50px#3333ff;
+  box-shadow: 4px 2px 50px #3333ff;
   text-align: left;
 }
 
 .eel-content {
-  max-width: 30%;
-  max-width: 100%;
+  max-width: 80%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
   height: auto;
-
 }
 
 .voltdiver {
