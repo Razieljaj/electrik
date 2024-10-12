@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-// Réinitialiser le jeu
-if (isset($_POST['reset'])) {
-    header("Location: etape2.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +13,14 @@ if (isset($_POST['reset'])) {
 <body>
 
 <h1>Jeu des Compteurs</h1>
-<div id="targets">
-    <p> Au fait, le code est : <span id="target1"></span>
+<div id="targets" class = 'dialogue'>
+    <p class = "dialogue_text"> Au fait, le code est : 
+    <strong>
+    <span id="target1"></span>
     <span id="target2"></span>
     <span id="target3"></span></p>
+    <img src="..\image\eel\eel.webp" class="eel-content">
+    </strong>
 </div>
 
 <div id="game">
@@ -32,12 +30,8 @@ if (isset($_POST['reset'])) {
 </div>
 
 <p id="message"></p>
-<button id="resetButton" style="display: none;" onclick="window.location.href='../etape3/etape3.php'">Aller à l'étape suivante</button>
+<button id="resetButton" style="display: none;" onclick="window.location.href='../etape3/etape3.php'" class = "button">Aller à l'étape suivante</button>
 
-<form method="POST">
-    <input type="hidden" name="reset" value="true">
-    <button type="submit">Change le code, anguille.</button>
-</form>
 
 <script src="script.js"></script>
 </body>
