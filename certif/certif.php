@@ -16,6 +16,6 @@
     <h2>Temps restant : <span id="timer">300</span> secondes</h2>
 
     <button id="button" class ="button_reussi">Vérifier</button>
-    <a href ="../etape1/etape1.php" class = 'felicitation dialogue_text' id = "felicitation">Bravo, vous êtes de vrais </br><b class = "voltdiver" >“Voltdivers”</b></a>
+    <a href ="../interrupteur/interrupteur.php" class = 'felicitation dialogue_text' id = "felicitation">Bravo, vous êtes de vrais </br><b class = "voltdiver" >“Voltdivers”</b></a>
 </body>
 </html> 

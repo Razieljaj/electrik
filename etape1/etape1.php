@@ -19,10 +19,10 @@
     <div id="zone2" class="drop-zone" data-piece="piece2">2</div>
     <div id="zone3" class="drop-zone" data-piece="piece3">3</div>
 </div>
-
+<p style = "color: rgb(246, 255, 197);">Réarrengez la smart grid pour que l'electricité se répartisse correctement</p>
 
     <div class="bottom-panel dialogue">
-        <p class="dialogue_text"> *bipbip* QUOI ENCORE !   Mince une panne est signalée vers le secteur E du niveau 0. Je suis sûre que c'est Kévin qui joue à Fortnite en même temps que ses voisins de palier préparent la raclette </p>
+        <p class="dialogue_text"> *bipbip* QUOI ENCORE !   Mince une panne est signalée vers le secteur E du niveau 0. Je suis sûre que c'est Kévin qui joue à Fortnite en même temps que ses voisins de palier préparent la raclette.</p>
     </div>
     <img src="..\image\eel\eel.webp" class="eel-content">
     <script src="script.js"></script>
