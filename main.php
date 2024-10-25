@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Electrik</title>
+    <title>Mission Volt</title>
 </head>
 <body>
 
-<h1 class = "titre">Escape game</h1>
+<h1 class = "titre">Mission Volt</h1>
   <p class = 'choix'>Choisissez la difficulté:</p>
   <div class="difficulte">
     <a type="button" class="button button1" href='certif/certif.php'>Gueux</a>
@@ -21,7 +21,7 @@
 </br>
 I should say :</br> Salutations, j'avais oublié que vous n'étiez que des se formant, qui n’ont pas la maîtrise absolue de la langue anglaise, dont le destin est de devenir des  </br> <a class = "voltdiver">“Voltdivers”<a>
   </p>
-  <img src="image\eel\eel.webp" class="eel-content">
+  <img src="image\eel\eel.png" class="eel-content">
   </div>
 </body>
 </html>

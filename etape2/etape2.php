@@ -19,14 +19,14 @@ session_start();
     <span id="target1"></span>
     <span id="target2"></span>
     <span id="target3"></span></p>
-    <img src="..\image\eel\eel.webp" class="eel-content">
+    <img src="..\image\eel\eel.png" class="eel-content">
     </strong>
 </div>
 
 <div id="game">
-    <div class="counter" id="counter1">0</div>
-    <div class="counter" id="counter2">0</div>
-    <div class="counter" id="counter3">0</div>
+    <div class="counter" id="counter1">9</div>
+    <div class="counter" id="counter2">4</div>
+    <div class="counter" id="counter3">2</div>
 </div>
 
 <p id="message"></p>

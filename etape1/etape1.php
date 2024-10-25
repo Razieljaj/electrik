@@ -24,7 +24,7 @@
     <div class="bottom-panel dialogue">
         <p class="dialogue_text"> *bipbip* QUOI ENCORE !   Mince une panne est signalée vers le secteur E du niveau 0. Je suis sûre que c'est Kévin qui joue à Fortnite en même temps que ses voisins de palier préparent la raclette.</p>
     </div>
-    <img src="..\image\eel\eel.webp" class="eel-content">
+    <img src="..\image\eel\eel.png" class="eel-content">
     <script src="script.js"></script>
     <a id="finish-button" class="button" style="display: none;" href = "../etape2/etape2.php">Bravo !</a>
 
