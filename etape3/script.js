@@ -1,30 +1,34 @@
-let compteur = 0;
-
+let compteur = 0
 function checkGuess() {
     let userGuess = parseFloat(document.getElementById('userGuess').value);
     let message = '';
+    const resultMessage = document.getElementById('resultMessage');
+    const bravoDiv = document.getElementById('Bravo');
+    const nextStepButton = document.getElementById('nextStepButton');
+
+    // Affiche #Bravo après toute tentative de réponse
+    bravoDiv.style.display = "block";
 
     if (isNaN(userGuess)) {
-        message = 'Veuillez entrer un nombre valide.';
-        compteur++;
+        message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
+        compteur ++
     } else if (userGuess < intensiteCorrecte) {
         message = 'C\'est plus !';
-        compteur++;
+        compteur ++
     } else if (userGuess > intensiteCorrecte) {
         message = 'C\'est moins !';
-        compteur++;
+        compteur ++
     } else {
-        // Lorsque la réponse est correcte
-        if (compteur <= 1) {
-            message = 'Félicitations, vous avez trouvé la bonne réponse : ' + intensiteCorrecte + ' A ! Vous connaissiez déjà la formule, petits malins.';
-        } else {
+        if (compteur <= 1){
+            message = 'Félicitations, vous avez trouvé la bonne réponse : ' + intensiteCorrecte + ' A ! Vous connaissiez déjà la formule n\'est ce pas ?';
+        }
+        
+        else{
             message = 'Félicitations, vous avez trouvé la bonne réponse : ' + intensiteCorrecte + ' A !';
         }
-        // Affiche le bouton pour passer à l'étape suivante
-        document.querySelector("#Bravo button").style.display = "inline-block";
+        nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
     }
 
-    // Affiche le message et l'image
-    document.getElementById('resultMessage').textContent = message;
-    document.getElementById('eelImage').style.display = "block";
+    // Affiche le message de résultat
+    resultMessage.textContent = message;
 }

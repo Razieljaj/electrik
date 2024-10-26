@@ -1,7 +1,6 @@
 <?php
-// Calcul de l'intensité correcte
-$puissance = 10000; // en watts
-$tension = 200; // en volts
+$puissance = 10000;
+$tension = 200;
 $intensite_correcte = $puissance / $tension;
 ?>
 
@@ -12,6 +11,7 @@ $intensite_correcte = $puissance / $tension;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission Volt - Jeu du Plus ou Moins</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="..\image\favicon.png">
 </head>
 <body>
 
@@ -23,10 +23,10 @@ $intensite_correcte = $puissance / $tension;
     <button onclick="checkGuess()">Vérifier</button>
     
     <!-- Section de résultat -->
-    <div id="Bravo" class="dialogue">
-        <button style="display: none;" onclick="window.location.href='../etape4/etape4.php'">Aller à l'étape suivante</button>
+    <div id="Bravo" class = "dialogue" style="display: none;">
         <div id="resultMessage" class="dialogue_text"></div>
-        <img id="eelImage" src="../image/eel/eel.png" class="eel-content" style="display: none;">
+        <img src="..\image\eel\eel.png" class="eel-content">
+        <button id="nextStepButton" style="display: none;" onclick="window.location.href='../etape4/etape4.php'">Aller à l'étape suivante</button>
     </div>
 
     <!-- Valeur de l'intensité correcte transmise en JavaScript -->

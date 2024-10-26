@@ -38,7 +38,7 @@ button {
     display: flex; /* Utiliser flexbox pour une disposition plus réactive */
     flex-direction: left; /* Aligner les éléments verticalement sur mobile */
     align-items: center; /* Centrer horizontalement */
-    margin-top: 20%; /* Ajuster pour éviter que le contenu soit trop en haut */
+    margin: 10%; /* Ajuster pour éviter que le contenu soit trop en haut */
     text-align: center;
   }
   
@@ -51,10 +51,13 @@ button {
     color: black;
     border: solid #3333ff;
     box-shadow: 4px 2px 50px #3333ff;
-    text-align: left;
   }
 
   .eel-content {
     max-width: 50%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
     height: auto;
   }
+
+  #Bravo {
+    display: none;
+}
