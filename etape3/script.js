@@ -1,4 +1,5 @@
 let compteur = 0
+const intensiteCorrecte = 50
 function checkGuess() {
     let userGuess = parseFloat(document.getElementById('userGuess').value);
     let message = '';

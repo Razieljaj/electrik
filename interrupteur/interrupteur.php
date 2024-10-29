@@ -1,12 +1,3 @@
-<?php
-// interrupteur_futuriste.php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Redirection vers une nouvelle page après l'animation
-    header('Location: ../etape1/etape1.php');
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,32 +7,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Allumez la centrale électrique</h1>
-</br>
+    <h1>Allumez la centrale électrique</h1>
+    <br>
     <div class="switch-container">
         <div class="switch" id="futuristicSwitch"></div>
         <div class="glow" id="futuristicGlow"></div>
     </div>
 
-    <form method="post" id="futuristicForm">
-        <button type="submit" id="submitSwitch"></button>
+    <form method="post" id="futuristicForm" action="etape2/etape2.php">
+        <button type="submit" id="submitSwitch" style="display:none;"></button>
     </form>
 
     <script>
         const switchElement = document.getElementById('futuristicSwitch');
         const glowElement = document.getElementById('futuristicGlow');
         const form = document.getElementById('futuristicForm');
-        const submitSwitch = document.getElementById('submitSwitch');
 
-        switchElement.addEventListener('click', () => {
+        switchElement.addEventListener('click', (event) => {
             // Ajoute l'animation pour descendre l'interrupteur
             switchElement.classList.add('active');
             glowElement.classList.add('active');
 
             // Attendre l'animation avant de soumettre le formulaire
             setTimeout(() => {
-                submitSwitch.click(); // Soumet le formulaire après 1.5s
-            }, 1500); // 1,5 secondes pour terminer l'animation
+                // Empêche le comportement par défaut du formulaire
+                event.preventDefault(); // Ajoutez ceci
+
+                // Envoie une requête POST
+                fetch('etape2/etape2.html', {
+                    method: 'POST'
+                }).then(() => {
+                    // Redirection vers l'étape suivante
+                    window.location.href = '../etape1/etape1.html';
+                });
+            }, 1500); // Délai de 1,5 seconde
         });
     </script>
 </body>

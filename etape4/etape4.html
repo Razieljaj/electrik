@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Volt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.png">
+</head>
+<body>
+    <h1>Calcul (encore)</h1>
+    
+    <!-- Instructions de calcul -->
+    <div class="dialogue">
+        <p class="dialogue_text">Regardez la formule dans la boîte et calculez l'intensité en fonction de la puissance et de la tension.</p>
+        <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
+    </div>
+
+    <!-- Zone de réponse utilisateur -->
+    <textarea id="userAnswer" placeholder="Entrez votre réponse ici"></textarea>
+    <button onclick="checkAnswer()">Vérifier</button>
+
+    <!-- Section de résultat : visible après réponse -->
+    <div id="Bravo" class="dialogue" style="display: none; margin-top: 20px;">
+        <div id="resultMessage" class="dialogue_text"></div> <!-- Message de résultat -->
+        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='../etape5/etape5.php'">Aller à l'étape suivante</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Correction du chemin -->
+</body>
+</html>

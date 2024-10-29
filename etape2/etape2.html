@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,9 +28,9 @@ session_start();
 </div>
 
 <p id="message"></p>
-<button id="resetButton" style="display: none;" onclick="window.location.href='../etape3/etape3.php'" class = "button">Aller à l'étape suivante</button>
+<button id="resetButton" style="display: none;" onclick="window.location.href='../etape3/etape3.html'" class = "button">Aller à l'étape suivante</button>
 
 
-<script src="script.js"></script>
+<script src="script.js">session_start();</script>
 </body>
 </html>

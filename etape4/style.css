@@ -9,12 +9,13 @@
   .dialogue_text {
     width: 90%; /* Utiliser une largeur relative pour s'adapter à la taille de l'écran */
     max-width: 600px; /* Limiter la largeur maximale pour les grands écrans */
-    margin: 10px auto;
+    margin: 10px 0;
     padding: 10px;
     background-color: rgba(200, 229, 255, 0.6);
     color: black;
     border: solid #3333ff;
     box-shadow: 4px 2px 50px #3333ff;
+    font-size: 1.2em;
   }
 
   .eel-content {
@@ -41,4 +42,17 @@ body {
     margin: 0;
     overflow-x: hidden; /* Éviter le débordement horizontal */
     text-align: center;
+}
+
+#Bravo {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+#nextStepButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
 }
