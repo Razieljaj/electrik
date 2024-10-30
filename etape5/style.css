@@ -17,7 +17,7 @@ button {
     padding: 20px;
     border-radius: 20px;
     cursor: pointer;
-    color: rgb(246, 255, 197);
+    color: rgb(224, 226, 83);
 }
 .dialogue {
     display: flex; /* Utiliser flexbox pour une disposition plus réactive */
@@ -42,3 +42,34 @@ button {
     max-width: 50%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
     height: auto;
   }
+
+.lever-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.lever {
+    width: 80px;
+    height: 150px;
+    background-color: #4a4a4a;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.lever.active {
+    background-color: #d4e0a0;
+    box-shadow: 0px 0px 100px;
+}
+
+.result {
+    margin-top: 20px;
+    display: none;
+}
+
+button:disabled {
+    background-color: #4a4a4a;
+    cursor: not-allowed;
+}
