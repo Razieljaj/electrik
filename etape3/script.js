@@ -1,35 +1,54 @@
-let compteur = 0
-const intensiteCorrecte = 50
-function checkGuess() {
-    let userGuess = parseFloat(document.getElementById('userGuess').value);
-    let message = '';
-    const resultMessage = document.getElementById('resultMessage');
-    const bravoDiv = document.getElementById('Bravo');
-    const nextStepButton = document.getElementById('nextStepButton');
+let targets = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+let clickedCounters = [false, false, false];
+let counters = [document.getElementById('counter1'), document.getElementById('counter2'), document.getElementById('counter3')];
+let intervals = [];
+let gameWon = false;
 
-    // Affiche #Bravo après toute tentative de réponse
-    bravoDiv.style.display = "block";
+// Afficher les objectifs pour chaque compteur
+document.getElementById('target1').textContent = targets[0];
+document.getElementById('target2').textContent = targets[1];
+document.getElementById('target3').textContent = targets[2];
 
-    if (isNaN(userGuess)) {
-        message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
-        compteur ++
-    } else if (userGuess < intensiteCorrecte) {
-        message = 'C\'est plus !';
-        compteur ++
-    } else if (userGuess > intensiteCorrecte) {
-        message = 'C\'est moins !';
-        compteur ++
-    } else {
-        if (compteur <= 1){
-            message = 'Félicitations, vous avez trouvé la bonne réponse : ' + intensiteCorrecte + ' A ! Vous connaissiez déjà la formule n\'est ce pas ?';
-        }
-        
-        else{
-            message = 'Félicitations, vous avez trouvé la bonne réponse : ' + intensiteCorrecte + ' A !';
-        }
-        nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
-    }
+function startGame() {
+    counters.forEach((counter, index) => {
+        // Définir des intervalles pour chaque compteur
+        intervals[index] = setInterval(() => {
+            if (!clickedCounters[index]) {
+                let newValue = Math.floor(Math.random() * 10);
+                counter.textContent = newValue;
 
-    // Affiche le message de résultat
-    resultMessage.textContent = message;
+                // Vérifier si le chiffre est le bon
+                if (newValue === targets[index]) {
+                    counter.classList.add('correct');
+                } else {
+                    counter.classList.remove('correct');
+                }
+            }
+        }, 450);
+
+        // Ajouter un écouteur d'événements pour cliquer
+        counter.addEventListener('click', () => {
+            if (!clickedCounters[index] && parseInt(counter.textContent) === targets[index]) {
+                clickedCounters[index] = true;
+                counter.classList.remove('correct');
+                counter.classList.add('clicked');
+                checkWinCondition();
+            }
+        });
+    });
 }
+
+function checkWinCondition() {
+    if (clickedCounters.every(Boolean) && !gameWon) {
+        gameWon = true;
+        clearIntervals();
+        document.getElementById('message').textContent = 'Félicitations, vous avez entré le bon code !';
+        document.getElementById('resetButton').style.display = 'block';
+    }
+}
+
+function clearIntervals() {
+    intervals.forEach(interval => clearInterval(interval));
+}
+
+window.onload = startGame;

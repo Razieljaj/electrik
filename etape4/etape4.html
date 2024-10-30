@@ -1,31 +1,32 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission Volt</title>
+    <title>Mission Volt - Jeu du Plus ou Moins</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="../image/favicon.png">
+    <link rel="icon" type="image/x-icon" href="..\image\favicon.png">
 </head>
 <body>
-    <h1>Calcul (encore)</h1>
+
+    <h1>Jeu du Plus ou Moins</h1>
+    <p>On sait que la puissance est de 10 000 Watts et la tension est de 200 Volts. <br> Pour vous, quelle est l'intensité ?</p>
     
-    <!-- Instructions de calcul -->
-    <div class="dialogue">
-        <p class="dialogue_text">Regardez la formule dans la boîte et calculez l'intensité en fonction de la puissance et de la tension.</p>
-        <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
+    <textarea id="userGuess" placeholder="Entrez votre réponse ici"></textarea>
+    <br>
+    <button onclick="checkGuess()">Vérifier</button>
+    
+    <!-- Section de résultat -->
+    <div id="Bravo" class = "dialogue" style="display: none;">
+        <div id="resultMessage" class="dialogue_text"></div>
+        <img src="..\image\eel\eel.png" class="eel-content">
+        <button id="nextStepButton" style="display: none;" onclick="window.location.href='../etape5/etape5.html'">Aller à l'étape suivante</button>
     </div>
 
-    <!-- Zone de réponse utilisateur -->
-    <textarea id="userAnswer" placeholder="Entrez votre réponse ici"></textarea>
-    <button onclick="checkAnswer()">Vérifier</button>
+    <!-- Valeur de l'intensité correcte transmise en JavaScript -->
+    <script src="script.js"></script>
 
-    <!-- Section de résultat : visible après réponse -->
-    <div id="Bravo" class="dialogue" style="display: none; margin-top: 20px;">
-        <div id="resultMessage" class="dialogue_text"></div> <!-- Message de résultat -->
-        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='../etape5/etape5.php'">Aller à l'étape suivante</button>
-    </div>
-
-    <script src="script.js"></script> <!-- Correction du chemin -->
 </body>
 </html>
