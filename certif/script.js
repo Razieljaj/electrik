@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var timer = 60;
+    var timer = 1;
     var countdown = setInterval(function () {
         timer--;
         document.getElementById('timer').textContent = timer;

@@ -8,6 +8,18 @@ body {
     margin: 0;
 }
 
+button {
+    background-color: rgba(29, 59, 213, 1);
+    border: none;
+    box-shadow: #050607 0px 0px 10px;
+    text-align: 20%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(224, 226, 83);
+}
+
 .dialogue {
     display: grid;
     grid-template-columns: 70% 30%;
@@ -38,14 +50,6 @@ body {
     display: none;
     margin: 20px;
 
-}
-
-#button {
-    background-image: radial-gradient(circle, rgba(29, 59, 213, 1) 0%, rgba(0, 204, 255, 1) 100%);
-    border: none;
-    margin: 10%;
-    padding: 20px;
-    border-radius: 15px;
 }
 
 h1{
@@ -91,5 +95,35 @@ h2{
     100% {
         text-shadow: 0 0 5px #3333ff, 0 0 10px #6666ff, 0 0 15px #9999ff, 0 0 20px #ccccff;
         transform: scale(1);
+    }
+}
+
+.glitch-container {
+    display: inline;
+}
+
+.glitch {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    animation: glitch 725ms infinite;
+}
+
+@keyframes glitch {
+    0%, 15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    }
+    16%, 49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+    }
+    50%, 99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
     }
 }

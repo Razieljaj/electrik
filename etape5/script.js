@@ -13,15 +13,16 @@ function toggleLever(index) {
 // Fonction pour afficher un indice
 function displayHint() {
     if (!hintDisplayed) {
-        resultMessage.textContent = "Indice : Activez le premier et le troisième levier !"; // Indice à afficher
-        hintDisplayed = true; // Marque que l'indice a été affiché
+        resultMessage.textContent = "Indice : Le nombre de tour(s) Eiffel a Paris et le premier nombre impair qui n'est pas pair après deux (qui lui est pair et non impair)"; // Indice à afficher
+        hintDisplayed = true;
     }
 }
 
 function checkCombination() {
     // Vérifiez la combinaison correcte (par exemple: levier 1 et 3 activés)
     const correctCombination = levers[0] && !levers[1] && levers[2] && !levers[3]; // 1 et 3 activés
-    const allLeversActivated = levers.every(lever => lever === true); // Vérifiez si tous les leviers sont activés
+    const allLeversActivated = levers.every(lever => lever === true);
+    const rien = levers.every(lever => lever === false); 
     let message = ''; // Réinitialisez le message à chaque vérification
 
     // Affichez les messages appropriés
@@ -35,8 +36,10 @@ function checkCombination() {
 
     if (allLeversActivated) {
         message = "C'est pas Versailles ici !"; // Message si tous les leviers sont activés
-    } else if (!correctCombination) {
-        message = "Réessayez avec une autre combinaison."; // Message pour les autres combinaisons
+    }
+
+    if (rien){
+        message = "Qui a éteint la lumière ?"
     }
 
     resultMessage.textContent = message; // Mettez à jour le message affiché
