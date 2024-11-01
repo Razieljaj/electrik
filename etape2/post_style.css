@@ -1,0 +1,81 @@
+body {
+    width: 90%;
+    background-color: #101318;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    color: rgb(246, 255, 197);
+    height: 90%;
+    margin: 0;
+}
+
+button {
+    background-color: rgba(29, 59, 213, 1);
+    border: none;
+    box-shadow: #050607 0px 0px 10px;
+    text-align: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(224, 226, 83);
+}
+
+.dialogue {
+    margin-top: 10%;
+    text-align: justify;
+    align-items: center;
+}
+
+.dialogue_text {
+    margin: 10%;
+    padding: 10%;
+    background-color: rgba(200, 229, 255, 0.6);
+    color: black;
+    border: solid #3333ff;
+    box-shadow: 4px 2px 200px#3333ff;
+    text-align: left;
+}
+
+.eel-content {
+    margin-left: 30%;
+    max-width: 40%;
+    height: auto;
+
+}
+
+.glitch {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    animation: glitch 725ms infinite;
+}
+
+@keyframes glitch {
+    0%, 15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+    }
+    16%, 49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+    }
+    50%, 99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+    }
+}
+
+.important {
+    color: #00008b;
+    text-shadow: 3px 0px 5px;
+}
+
+.electrique {
+    color: #fcff3d;
+    text-shadow: 3px 0px 5px;
+  }

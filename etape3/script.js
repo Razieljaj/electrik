@@ -42,7 +42,7 @@ function checkWinCondition() {
     if (clickedCounters.every(Boolean) && !gameWon) {
         gameWon = true;
         clearIntervals();
-        document.getElementById('message').textContent = 'Félicitations, vous avez entré le bon code !';
+        document.getElementById('message').textContent = '';
         document.getElementById('resetButton').style.display = 'block';
     }
 }

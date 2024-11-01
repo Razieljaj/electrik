@@ -26,7 +26,7 @@
     <!-- Section de résultat : visible après réponse -->
     <div id="Bravo" class="dialogue" style="display: none; margin-top: 20px;">
         <div id="resultMessage" class="dialogue_text"></div> <!-- Message de résultat -->
-        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='../etape3/etape3.html'">Aller à l'étape suivante</button>
+        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='post_etape2.html'">Aller à l'étape suivante</button>
     </div>
 
     <script>
@@ -49,7 +49,7 @@
             } else if (userAnswer !== 6.5) {
                 message = 'Non ce n\'est pas ça, réessaie encore.';
             } else {
-                message = 'Argh tous mes plans de conquête du mon… de transports <a class="electrique"> électriques </a>sont <a class="enerve">gâchés</a>. Tant pis, je verrai ça plus tard,';
+                message = 'Argh tous mes plans de conquête du mon… <br>de tran<span class="glitch">s</span>ports <a class="electrique"> électriques </a>sont <a class="enerve">gâchés</a>. Tant <span class="glitch">p</span>is, je verrai ça plus tard,';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
             }
 

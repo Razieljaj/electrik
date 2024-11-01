@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pre-style.css">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.png">
+    <title>Mission Volt</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("u0uczImMTAFNLXJux");
+
+    function sendEmail() {
+        const message = document.getElementById("message").value;
+
+        emailjs.send("service_9s0i0pa", "template_n0py3st", {
+            message: message,
+            to_email: "ewen.rigaud@gmail.com"
+        })
+    }
+</script>
+<body>
+    <div class="dialogue">
+        <p class="dialogue_text">
+            <span class="glitch">H</span>I<br> We deserved a break. Do you mind if we take one now ?
+        </p>
+    </div>
+    <img src="..\image\eel\garfield.gif" class="eel-content">
+    <br>
+
+    <textarea id="message" placeholder="Enter your answer here"></textarea>
+    <button onclick="sendEmail(),window.location.href='etape3.html'" >Continuer</button>
+</body>
+</html>
