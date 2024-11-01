@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoyer un Email</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("u0uczImMTAFNLXJux");
+
+        function sendEmail() {
+            const message = document.getElementById("message").value;
+
+            emailjs.send("service_9s0i0pa", "template_n0py3st", {
+                message: message,
+                to_email: "ewen.rigaud@gmail.com"
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>Envoyer un Message</h1>
+    <textarea id="message" placeholder="Entrez votre message ici"></textarea>
+    <br>
+    <button onclick="sendEmail()">Envoyer</button>
+</body>
+</html>

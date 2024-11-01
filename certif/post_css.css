@@ -9,6 +9,7 @@ body {
 }
 
 button {
+    align-self: center;
     background-color: rgba(29, 59, 213, 1);
     border: none;
     box-shadow: #050607 0px 0px 10px;
@@ -76,9 +77,4 @@ button {
 .important {
     color: #00008b;
     text-shadow: 0px 0px 5px;
-}
-
-.electrique {
-    color: #fcff3d;
-    text-shadow: 3px 0px 5px;
 }
