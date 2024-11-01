@@ -30,6 +30,16 @@ body {
     text-decoration: none;
     color: aliceblue;
 }
+
+.alert{
+    background-color: rgb(219, 21, 21);
+    border: none;
+    margin: 10%;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: aliceblue;
+}
 /* Indicateurs */
 .drop-zone {
     position: absolute;
@@ -166,4 +176,8 @@ body {
 .enerve {
     color: #a70000;
     text-shadow: 0px 0px 5px;
+}
+
+.hidden {
+    display: none;
 }

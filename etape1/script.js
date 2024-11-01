@@ -52,4 +52,47 @@ document.addEventListener('DOMContentLoaded', function () {
             placePiece(zone);
         });
     });
+
+// Ajouter l'événement de clic pour le bouton play
+document.getElementById('playButton').addEventListener('click', function() {
+    const audio = document.getElementById('myAudio');
+    audio.play();
+})});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Récupérer tous les éléments à désactiver
+    const selectableImages = document.querySelectorAll('.selectable');
+    const dropZones = document.querySelectorAll('.drop-zone');
+    const dialogues = document.querySelectorAll('.dialogue'); // Corriger ici
+
+    // Fonction pour activer/désactiver des éléments
+    function setElementsDisabled(disabled) {
+        selectableImages.forEach(image => {
+            image.style.pointerEvents = disabled ? 'none' : 'auto';
+            image.style.opacity = disabled ? '0.5' : '1'; // Change l'opacité pour montrer qu'ils sont désactivés
+        });
+        dropZones.forEach(zone => {
+            zone.style.pointerEvents = disabled ? 'none' : 'auto';
+            zone.style.opacity = disabled ? '0.5' : '1'; // Change l'opacité pour montrer qu'ils sont désactivés
+        });
+        dialogues.forEach(dialogue => {
+            dialogue.style.pointerEvents = disabled ? 'none' : 'auto'; // Désactiver l'interaction
+            dialogue.style.opacity = disabled ? '0.01' : '1'; // Réduire l'opacité pour les rendre illisibles
+        });
+    }
+
+    // Désactiver tous les éléments au début
+    setElementsDisabled(true);
+
+    // Ajouter l'événement de clic pour le bouton play
+    document.getElementById('playButton').addEventListener('click', function() {
+        const audio = document.getElementById('myAudio');
+        audio.play();
+        
+        // Masquer le bouton après le clic
+        this.style.display = 'none';
+
+        // Activer les éléments interactifs maintenant que le bouton a été cliqué
+        setElementsDisabled(false);
+    });
 });
