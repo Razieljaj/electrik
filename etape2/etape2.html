@@ -12,7 +12,10 @@
     
     <!-- Instructions de calcul -->
     <div class="dialogue">
-        <p class="dialogue_text">Regardez la formule dans la boîte et calculez l'intensité en fonction de la puissance et de la tension.</p>
+        <p class="dialogue_text">Pour m’aider calculez la vitesse de <a class="electrique"> l'électricité</a> dans tous les câbles du monde, aidez-vous de la formule dans la <a class="important">boîte</a> <br><br>Voici les données :
+            <br><b>1 300 000</b> km de câbles
+            <br><b>200 000</b> km/s
+            </p>
         <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
     </div>
 
@@ -46,12 +49,12 @@
             } else if (userAnswer !== 6.5) {
                 message = 'Non ce n\'est pas ça, réessaie encore.';
             } else {
-                message = 'Félicitations, vous avez trouvé la bonne réponse !';
+                message = 'Argh tous mes plans de conquête du mon… de transports <a class="electrique"> électriques </a>sont <a class="enerve">gâchés</a>. Tant pis, je verrai ça plus tard,';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
             }
 
             // Affiche le message de résultat dans l'élément resultMessage
-            resultMessage.textContent = message;
+            resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
         }
     </script>
 </body>

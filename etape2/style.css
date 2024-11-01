@@ -48,3 +48,18 @@ body {
   border-top: 1px solid #ddd;
   padding-top: 15px;
 }
+
+.important {
+  color: #00008b;
+  text-shadow: 0px 0px 5px;
+}
+
+.electrique {
+  color: #fcff3d;
+  text-shadow: 3px 0px 5px;
+}
+
+.enerve {
+  color: #a70000;
+  text-shadow: 0px 0px 5px;
+}
