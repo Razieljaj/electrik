@@ -9,12 +9,25 @@
 </head>
 <body>
     <div class = "dialogue">
-        <p class = dialogue_text> Trêve de bavardages, <br>
-            Nous avons  accompli nos tâches existentielles, retour à la base.
-            </p>
-        <img src="..\image\eel\eel.png" class="eel-content">
+        <p class="dialogue_text"><a class="enerve">AHAHAHAH</a>, merci de m’avoir aidé, mon plan <span class="glitch"> méphistophélique</span> a fonctionné, je pourrai <a class="enerve">contrôler</a> le prix de l’électricité et donc <a class="enerve">contrôler le MONDE</a>, il me fallait seulement la <a class="important">sphère de Dyson</a> et vous m'avez <a class="important">aidé</a> à l'<a class="enerve">obtenir</a>.</p>
     </div>
+    <img src="..\image\eel\eel-sadique.png" class="eel-content">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("u0uczImMTAFNLXJux");
+
+        function sendEmail() {
+            const message = document.getElementById("message").value;
+
+            emailjs.send("service_9s0i0pa", "template_n0py3st", {
+                message: message,
+                to_email: "ewen.rigaud@gmail.com"
+            })
+        }
+    </script>
     <p>Vous avez découvert 63% du jeu.</p>
-    <button onclick="window.location.href='../index.html'">Retour</button>
+    <p>Score : 1389</p>
+    <textarea placeholder="Et si le transport d’électricité dépendait d’anguilles qui pourraient soudain décider d’arrêter le courant... Comment rassurerais-tu la population ?" id="message"></textarea>
+    <button onclick="sendEmail()"><a href="eelslap.com" style="text-decoration: none; color: aliceblue;">Contrôler le monde</a></button>
 </body>
 </html>

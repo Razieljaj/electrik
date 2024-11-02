@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     width: 100%; /* Utiliser 100% pour que le corps s'étende à toute la largeur */
-    background-color: #101318;
+    background-color: #5A5A5A  ;
     background-image: url('image/background/les images superficielles.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -9,10 +9,6 @@ body {
     height: 100vh; /* Utiliser 100vh pour s'assurer que le corps remplit toute la hauteur de la fenêtre */
     margin: 0;
     overflow-x: hidden; /* Éviter le débordement horizontal */
-}
-
-h1 {
-    text-align: center;
 }
 
 #game {
@@ -26,7 +22,7 @@ h1 {
     width: 100px;
     height: 100px;
     font-size: 36px;
-    background-color: #2d3441a2;
+    background-color: #444444;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,8 +53,9 @@ h1 {
     display: flex; /* Utiliser flexbox pour une disposition plus réactive */
     flex-direction: left; /* Aligner les éléments verticalement sur mobile */
     align-items: center; /* Centrer horizontalement */
-    margin-top: 15%; /* Ajuster pour éviter que le contenu soit trop en haut */
-    margin-left: 10% ;
+    margin-top: 20%; /* Ajuster pour éviter que le contenu soit trop en haut */
+    margin-left: 5% ;
+    margin-bottom: 20vh;
     text-align: center;
   }
   
@@ -78,6 +75,7 @@ h1 {
     max-width: 80%;
     height: auto;
     margin: 20px;
+    padding: 10px;
   }
 
   .button {
@@ -85,16 +83,12 @@ h1 {
     border: none;
     box-shadow: #050607 0px 0px 10px;
     text-align: 20%;
-    margin: auto;
+    margin-top: 20vh;
+    margin-left: 20vh;
     padding: 20px;
     border-radius: 20px;
     cursor: pointer;
     color: #050607;
-  }
-
-  .button:active {
-    margin-top: 20px;
-    rotate: 0deg
   }
 
   .glitch {

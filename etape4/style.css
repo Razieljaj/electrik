@@ -61,3 +61,13 @@ button {
   margin-top: 20%; /* Ajuster pour éviter que le contenu soit trop en haut */
   text-align: center;
 }
+
+.important {
+  color: #00008b;
+  text-shadow: 3px 0px 5px;
+}
+
+.electrique {
+  color: #fcff3d;
+  text-shadow: 3px 0px 5px;
+}

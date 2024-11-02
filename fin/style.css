@@ -34,11 +34,41 @@ button {
     padding: 10px;
     background-color: rgba(200, 229, 255, 0.6);
     color: black;
-    border: solid #3333ff;
-    box-shadow: 4px 2px 50px #3333ff;
+    border: solid #ff3333;
+    box-shadow: 4px 2px 50px #ff3333;
   }
 
   .eel-content {
     max-width: 50%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
     height: auto;
   }
+
+  .important {
+    color: #00008b;
+    text-shadow: 3px 0px 5px;
+  }
+  
+  .electrique {
+    color: #fcff3d;
+    text-shadow: 3px 0px 5px;
+  }
+
+  .enerve {
+    color: #a70000;
+    text-shadow: 0px 0px 5px;
+  }
+
+  textarea{
+    width: 80%;
+    height: 30vh;
+    max-width: 80%;
+    min-width: 79%;
+    margin-left: 10%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    border: solid #33ff44;
+    box-shadow: 4px 2px 200px#33ff44;
+    background-color: #050607;
+    color: rgb(224, 226, 83);
+    
+}
