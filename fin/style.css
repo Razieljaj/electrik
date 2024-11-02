@@ -1,7 +1,12 @@
 body {
     width: 100%; /* Utiliser 100% pour que le corps s'étende à toute la largeur */
-    background-color: #101318;
-    color: rgb(246, 255, 197);
+    background-image:url("../image/background/dyson-sphere.png");
+    background-color: #050607;
+    background-size: cover; /* Ajuster pour que l'image remplisse tout l'écran */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat;
+    align-self: center;
+    color: rgb(2, 6, 24);
     height: 100vh; /* Utiliser 100vh pour s'assurer que le corps remplit toute la hauteur de la fenêtre */
     margin: 0;
     overflow-x: hidden; /* Éviter le débordement horizontal */
