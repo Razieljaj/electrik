@@ -8,18 +8,6 @@
     <title>Mission Volt</title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    emailjs.init("u0uczImMTAFNLXJux");
-
-    function sendEmail() {
-        const message = document.getElementById("message").value;
-
-        emailjs.send("service_9s0i0pa", "template_n0py3st", {
-            message: message,
-            to_email: "ewen.rigaud@gmail.com"
-        })
-    }
-</script>
 <body>
     <div class="dialogue">
         <p class="dialogue_text">
@@ -30,6 +18,6 @@
     <br>
 
     <textarea id="message" placeholder="Enter your answer here"></textarea>
-    <button onclick="sendEmail(),window.location.href='etape3.html'" >Continuer</button>
+    <button onclick="window.location.href='etape3.html'" >Continuer</button>
 </body>
 </html>
