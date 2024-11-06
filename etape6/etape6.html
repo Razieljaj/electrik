@@ -9,10 +9,16 @@
 </head>
 <body>
     <div class="dialogue">
-        <p class="dialogue_text">Pour m’aider calculez la vitesse de <a class="electrique"> l'électricité</a> dans tous les câbles du monde, aidez-vous de la formule dans la <a class="important">boîte</a> <br><br>Voici les données :
-            <br><b>1 300 000</b> km de câbles
-            <br><b>200 000</b> km/s
-            </p>
+        <p class="dialogue_text">J’ai trouvé une liste, je vais vous la lire elle pourrait vous aider ici : 
+            <br>Panneaux photovoltaïques
+            <br>Éoliennes offshore
+            <br>Maisons particulières
+            <br>Centre commerciaux
+            <br>Zones résidentielles
+            <br>Centrales nucléaires
+            <br>Turbines à gaz
+            <br>Usines
+        </p>
         <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
     </div>
 
@@ -28,31 +34,35 @@
 
     <script>
         function checkAnswer() {
-            // Récupère la réponse utilisateur
-            let userAnswer = parseFloat(document.getElementById('userAnswer').value.replace(',', '.'));
+            // Récupère la réponse utilisateur (utiliser .value pour obtenir la valeur de la textarea)
+            let userAnswer = document.getElementById('userAnswer').value.trim();  // Obtenir la valeur de la textarea en tant que chaîne et éliminer les espaces
             let message = '';
             
             // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
             const resultMessage = document.getElementById('resultMessage');
             const bravoDiv = document.getElementById('Bravo');
             const nextStepButton = document.getElementById('nextStepButton');
-
+        
             // Affiche la section #Bravo après toute tentative de réponse
             bravoDiv.style.display = "block";
-
-            // Vérifie si l'entrée est un nombre
-            if (isNaN(userAnswer)) {
+        
+            // Vérifie si l'entrée est un nombre ou un texte valide
+            if (isNaN(userAnswer) && userAnswer !== '7198' && userAnswer !== '7851' && userAnswer !== '5616' && userAnswer !== '1489' && userAnswer !== '6548') {
                 message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
-            } else if (userAnswer !== 6.5) {
-                message = 'Non ce n\'est pas ça, réessaie encore.';
-            } else {
-                message = 'Argh tous mes plans de conquête du mon… <br>de tran<span class="glitch">s</span>ports <a class="electrique"> électriques </a>sont <a class="enerve">gâchés</a>. Tant <span class="glitch">p</span>is, je verrai ça plus tard,';
+            } else if (userAnswer === '3428') {
+                message = 'Bon, vous avez une connaissance suffisante pour la suite';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
+            } else if (userAnswer === '7851' || userAnswer === '5616' || userAnswer === '7198' || userAnswer === '1489' || userAnswer === '6548') {
+                message = "Presque !";
+            } else {
+                message = 'Non ce n\'est pas ça, réessaie encore.';
             }
-
+        
             // Affiche le message de résultat dans l'élément resultMessage
             resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
         }
     </script>
+    
+    
 </body>
 </html>

@@ -1,0 +1,105 @@
+.dialogue {
+    display: flex; /* Utiliser flexbox pour une disposition plus réactive */
+    flex-direction: column; /* Aligner les éléments verticalement sur mobile */
+    align-items: center; /* Centrer horizontalement */
+    margin: 10%; /* Ajuster pour éviter que le contenu soit trop en haut */
+    text-align: center;
+  }
+  
+  .dialogue_text {
+    width: 90%; /* Utiliser une largeur relative pour s'adapter à la taille de l'écran */
+    max-width: 600px; /* Limiter la largeur maximale pour les grands écrans */
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(200, 229, 255, 0.6);
+    color: black;
+    border: solid #3333ff;
+    box-shadow: 4px 2px 50px #3333ff;
+    font-size: 1.2em;
+  }
+
+  .eel-content {
+    max-width: 50%; /* Utiliser 80% pour s'assurer que l'image ne dépasse pas l'écran */
+    height: auto;
+  }
+
+  button {
+    background-color: rgba(29, 59, 213, 1);
+    border: none;
+    box-shadow: #050607 0px 0px 10px;
+    text-align: 20%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(246, 255, 197);
+}
+body {
+    width: 100%; /* Utiliser 100% pour que le corps s'étende à toute la largeur */
+    background-color: #101318;
+    color: rgb(246, 255, 197);
+    height: 100vh; /* Utiliser 100vh pour s'assurer que le corps remplit toute la hauteur de la fenêtre */
+    overflow-x: hidden; /* Éviter le débordement horizontal */
+    text-align: center;
+}
+
+#Bravo {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.important {
+  color: #00008b;
+  text-shadow: 0px 0px 5px;
+}
+
+.electrique {
+  color: #fcff3d;
+  text-shadow: 3px 0px 5px;
+}
+
+.enerve {
+  color: #a70000;
+  text-shadow: 0px 0px 5px;
+}
+
+
+#gauge-container {
+	height: 30px;
+	background-color: #ddd;
+	border-radius: 15px;
+	margin: 20px 10vh;
+	position: relative;
+	box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+
+
+#gauge {
+    height: 100%;
+    background-color: rgb(0, 41, 128);
+    border-radius: 15px;
+    width: 0;
+    
+}
+
+#spamButton {
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#newButton {
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}

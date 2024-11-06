@@ -35,13 +35,13 @@
                 event.preventDefault(); // Ajoutez ceci
 
                 // Envoie une requête POST
-                fetch('etape1/etape1.html', {
+                fetch('../etape2/etape2.html', {
                     method: 'POST'
                 }).then(() => {
                     // Redirection vers l'étape suivante
-                    window.location.href = '../etape1/etape1.html';
+                    window.location.href = '../etape2/etape2.html';
                 });
-            }, 1500); // Délai de 1,5 seconde
+            }, 2000); // Délai de 2 secondes
         });
     </script>
 </body>

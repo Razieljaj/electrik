@@ -9,14 +9,20 @@
     <title>Mission Volt</title>
 </head>
 <body>
-    <h1> Certification</h1>
-<div class = "dialogue">
-    <p class = dialogue_text> Pour débuter votre service vous devrez valider la “certification d'aptitude physique”qui  est la suivante :</br> <input type = 'checkbox'>Louchez</input></br><input type = 'checkbox'>Tirez la langue</input></br><input type = 'checkbox'> Tournez sur vous même dans cette position 3 fois</input></br><input type = 'checkbox'>Et pour les plus courageux à cloche pied.</input></p>
-    <img src="..\image\eel\eel.png" class="eel-content">
+    <h1>Certification</h1>
+    <div class="dialogue">
+        <p class="dialogue_text">Pour débuter votre service vous devrez valider la “certification d'aptitude physique” qui est la suivante :</br>
+            <input type="checkbox"> Louchez</br>
+            <input type="checkbox"> Tirez la langue</br>
+            <input type="checkbox"> Tournez sur vous-même dans cette position 3 fois</br>
+            <input type="checkbox"> Et pour les plus courageux à cloche-pied.</input>
+        </p>
+        <img src="../image/eel/eel.png" class="eel-content">
     </div>
     <h2>Temps restant : <span id="timer">300</span> secondes</h2>
 
-    <button id="button" >Vérifier</button>
-    <a href ="post_certif.html" class = 'felicitation dialogue_text' id = "felicitation">Bravo, vous êtes de vrais </br><b class = "voltdiver" >“Voltdivers”</b></a>
+    <button id="button" style="display: none;">Vérifier</button>
+    <p class="dialogue_text felicitation" id="felicitation" style="display: none;">Bravo, vous êtes de vrais </br><b class="voltdiver">“Voltdivers”</b></p>
+    <button onclick="window.location.href='post_certif.html'" class="felicitation" id="felicitationButton" style="display: none;">Continuer</button>
 </body>
-</html> 
+</html>

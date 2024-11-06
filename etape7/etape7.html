@@ -9,10 +9,9 @@
 </head>
 <body>
     <div class="dialogue">
-        <p class="dialogue_text">Pour m’aider calculez la vitesse de <a class="electrique"> l'électricité</a> dans tous les câbles du monde, aidez-vous de la formule dans la <a class="important">boîte</a> <br><br>Voici les données :
-            <br><b>1 300 000</b> km de câbles
-            <br><b>200 000</b> km/s
-            </p>
+        <p class="dialogue_text">
+        Regardez la forme rigolote dans la boite, combien y a-t-il de triangles dans cette forme au total ? 
+        </p>
         <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
     </div>
 
@@ -28,31 +27,33 @@
 
     <script>
         function checkAnswer() {
-            // Récupère la réponse utilisateur
-            let userAnswer = parseFloat(document.getElementById('userAnswer').value.replace(',', '.'));
+            // Récupère la réponse utilisateur (utiliser .value pour obtenir la valeur de la textarea)
+            let userAnswer = document.getElementById('userAnswer').value.trim();  // Obtenir la valeur de la textarea en tant que chaîne et éliminer les espaces
             let message = '';
             
             // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
             const resultMessage = document.getElementById('resultMessage');
             const bravoDiv = document.getElementById('Bravo');
             const nextStepButton = document.getElementById('nextStepButton');
-
+        
             // Affiche la section #Bravo après toute tentative de réponse
             bravoDiv.style.display = "block";
-
-            // Vérifie si l'entrée est un nombre
+        
+            // Vérifie si l'entrée est un nombre ou un texte valide
             if (isNaN(userAnswer)) {
                 message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
-            } else if (userAnswer !== 6.5) {
-                message = 'Non ce n\'est pas ça, réessaie encore.';
-            } else {
-                message = 'Argh tous mes plans de conquête du mon… <br>de tran<span class="glitch">s</span>ports <a class="electrique"> électriques </a>sont <a class="enerve">gâchés</a>. Tant <span class="glitch">p</span>is, je verrai ça plus tard,';
+            } else if (userAnswer === '23') {
+                message = 'Mouais, On dirait que ça a été fait par hasard mais c\'est juste';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
+            } else {
+                message = 'Non ce n\'est pas ça, réessaie encore.';
             }
-
+        
             // Affiche le message de résultat dans l'élément resultMessage
             resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
         }
     </script>
+    
+    
 </body>
 </html>

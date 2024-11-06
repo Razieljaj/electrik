@@ -54,6 +54,14 @@ button {
     display: none;
 }
 
+.smart_grid{
+  max-width: 90%;
+  height: auto;
+  box-shadow: 0 0 3px rgb(27, 0, 0);
+  border-radius: 10px;
+  margin-top: 10px;
+  }
+
 #resultMessage {
   display: flex; /* Utiliser flexbox pour une disposition plus réactive */
   flex-direction: column; /* Aligner les éléments verticalement sur mobile */

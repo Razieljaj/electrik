@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.png">
+	<title>Jeu de Spamming</title>
+</head>
+<body>
+
+	<p>Appuie frénétiquement sur le bouton pour remplir la jauge !</p>
+
+	<div id="gauge-container">
+		<div id="gauge"></div>
+	</div>
+
+	<button id="spamButton" onmousedown="startSpamming()" onmouseup="stopSpamming()">Appuyer ici!</button>
+	<button id="newButton" onclick="window.location.href='../transi-jamel.html'">Tu as gagné !</button>
+
+	<script>
+		let gauge = 0;
+		const maxGauge = 100;
+		const gaugeElement = document.getElementById("gauge");
+		const spamButton = document.getElementById("spamButton");
+		const newButton = document.getElementById("newButton");
+
+		let isSpamming = false;
+		let increaseInterval, decreaseInterval;
+
+		function startSpamming() {
+			isSpamming = true;
+
+			// Débute l'incrémentation répétée
+			if (!increaseInterval) {
+				increaseInterval = setInterval(increaseGauge, 50); // Augmente tous les 50ms
+			}
+			
+			// Commence la diminution après une pause
+			if (!decreaseInterval) {
+				decreaseInterval = setInterval(decreaseGauge, 150);
+			}
+		}
+
+		function stopSpamming() {
+			isSpamming = false;
+			clearInterval(increaseInterval);
+			increaseInterval = null;
+		}
+
+		function increaseGauge() {
+			if (gauge < maxGauge) {
+				gauge += 3;
+				updateGauge();
+			}
+		}
+
+		function updateGauge() {
+			const percentage = (gauge / maxGauge) * 100;
+			gaugeElement.style.width = percentage + "%";
+
+			if (gauge >= maxGauge) {
+				showNewButton();
+			}
+		}
+
+		function showNewButton() {
+			newButton.style.display = "inline-block";
+			spamButton.style.display = "none";
+			clearInterval(decreaseInterval);
+		}
+
+		function decreaseGauge() {
+			if (!isSpamming && gauge > 0) {
+				gauge -= 3;
+				updateGauge();
+			}
+		}
+	</script>
+</body>
+</html>

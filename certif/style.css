@@ -46,7 +46,8 @@ button {
 }
 
 #button,
-#felicitation {
+#felicitation,
+#felicitationButton {
     display: none;
     margin: 20px;
 
