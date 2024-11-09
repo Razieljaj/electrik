@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Volt</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="../image/favicon.png">
+</head>
+<body>
+    <div class="dialogue">
+        <p class="dialogue_text">Oups, j’ai oublié de prendre mon séquoia dans le laboratoire. Je vais le chercher, en attendant rendez vous utiles, fouillez dans ce bazar, il doit y avoir des objets dont nous aurons besoin par la suite.</p>
+        <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
+    </div>
+    <p>Vous pouvez vous servir de la grille de mots croisés dans la boîte
+    Il y a 7 mots cachés dans cette grille, une fois que vous les avez tous trouvés, réarrangez les initiales afin de constituer le mot de passe
+    </p>
+
+    <!-- Zone de réponse utilisateur -->
+    <textarea id="userAnswer" placeholder="Entrez le mot de passe ici"></textarea>
+    <button onclick="checkAnswer()">Vérifier</button>
+
+    <!-- Section de résultat : visible après réponse -->
+    <div id="Bravo" class="dialogue" style="display: none; margin-top: 20px;">
+        <div id="resultMessage" class="dialogue_text"></div> <!-- Message de résultat -->
+        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='../etapefinale/etapefinale.html'">Aller à l'étape suivante</button>
+    </div>
+
+    <script>
+function checkAnswer() {
+    // Récupère la réponse utilisateur, convertit en minuscules, et normalise pour enlever les accents
+    let userAnswer = document.getElementById('userAnswer').value.trim().toLowerCase();
+    
+    // Supprime les accents des lettres
+    userAnswer = userAnswer.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    let message = '';
+    
+    // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
+    const resultMessage = document.getElementById('resultMessage');
+    const bravoDiv = document.getElementById('Bravo');
+    const nextStepButton = document.getElementById('nextStepButton');
+
+    // Affiche la section #Bravo après toute tentative de réponse
+    bravoDiv.style.display = "block";
+
+    // Vérifie la réponse, en ignorant la casse et les accents
+    if (userAnswer == "cablage") {
+        message = "Parfait vous avez trouvé ce que je cherchais, passons à la suite.";
+        nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
+    } 
+    
+    else if(userAnswer=="cable"||userAnswer=="cables"){
+        message = "Non, il faut utiliser toutes les lettres. Le pauvre G qui n'a rien demandé se fait délaisser et je suis censée ne rien dire ? Eh bien non, je ne suis pas d'accord je suis pour l'intégrité."
+    } else {
+        message = 'Non ce n\'est pas ça, réessaie encore.';
+    }
+
+    // Affiche le message de résultat dans l'élément resultMessage
+    resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
+}
+
+    </script>
+    
+    
+</body>
+</html>
