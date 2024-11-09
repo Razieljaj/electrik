@@ -1,5 +1,5 @@
 body {
-    width: 90%;
+    width: 99%;
     background-color: #101318;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -24,7 +24,6 @@ button {
 .dialogue {
     margin-top: 10%;
     text-align: justify;
-    align-items: center;
 }
 
 .dialogue_text {
