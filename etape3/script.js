@@ -24,7 +24,7 @@ function startGame() {
                     counter.classList.remove('correct');
                 }
             }
-        }, 600);
+        }, 470);
 
         // Ajouter un écouteur d'événements pour cliquer
         counter.addEventListener('click', () => {

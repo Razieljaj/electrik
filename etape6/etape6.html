@@ -8,16 +8,20 @@
     <link rel="icon" type="image/x-icon" href="../image/favicon.png">
 </head>
 <body>
+    <h1>Contrôle surprise</h1>
     <div class="dialogue">
-        <p class="dialogue_text">J’ai trouvé une liste, je vais vous la lire elle pourrait vous aider ici : 
-            <br>Panneaux photovoltaïques
-            <br>Éoliennes offshore
-            <br>Maisons particulières
-            <br>Centre commerciaux
-            <br>Zones résidentielles
-            <br>Centrales nucléaires
-            <br>Turbines à gaz
-            <br>Usines
+        <p class="dialogue_text">
+            Je sais, vous venez de passer la certification mais il n’y a jamais de mauvais moment pour tester ses employés.
+
+            <br>-J’ai trouvé une liste, je vais vous la lire elle pourrait vous aider ici : 
+            <br>-Panneaux photovoltaïques
+            <br>-Éoliennes offshore
+            <br>-Maisons particulières
+            <br>-Centre commerciaux
+            <br>-Zones résidentielles
+            <br>-Centrales nucléaires
+            <br>-Turbines à gaz
+            <br>-Usines
         </p>
         <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
     </div>
@@ -29,7 +33,7 @@
     <!-- Section de résultat : visible après réponse -->
     <div id="Bravo" class="dialogue" style="display: none; margin-top: 20px;">
         <div id="resultMessage" class="dialogue_text"></div> <!-- Message de résultat -->
-        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='post_etape2.html'">Aller à l'étape suivante</button>
+        <button id="nextStepButton" style="display: none; margin-top: 10px;" onclick="window.location.href='../etape2/etape2.html'">Aller à l'étape suivante</button>
     </div>
 
     <script>
@@ -47,12 +51,12 @@
             bravoDiv.style.display = "block";
         
             // Vérifie si l'entrée est un nombre ou un texte valide
-            if (isNaN(userAnswer) && userAnswer !== '7198' && userAnswer !== '7851' && userAnswer !== '5616' && userAnswer !== '1489' && userAnswer !== '6548') {
+            if (isNaN(userAnswer) && userAnswer !== '1099' && userAnswer !== '3515' && userAnswer !== '6179' && userAnswer !== '1896' && userAnswer !== '1856') {
                 message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
-            } else if (userAnswer === '3428') {
+            } else if (userAnswer === '4872') {
                 message = 'Bon, vous avez une connaissance suffisante pour la suite';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
-            } else if (userAnswer === '7851' || userAnswer === '5616' || userAnswer === '7198' || userAnswer === '1489' || userAnswer === '6548') {
+            } else if (userAnswer === '1099' || userAnswer === '3515' || userAnswer === '6179' || userAnswer === '1896' || userAnswer === '1856') {
                 message = "Presque !";
             } else {
                 message = 'Non ce n\'est pas ça, réessaie encore.';
