@@ -10,13 +10,14 @@
 <body>
 
 	<p>Appuiez frénétiquement sur le bouton pour remplir la jauge, il faut enfoncer la porte !</p>
+	<p>Indice : Vous pouvez le faire a plusieurs</p>
 
 	<div id="gauge-container">
 		<div id="gauge"></div>
 	</div>
 
 	<button id="spamButton" onmousedown="startSpamming()" onmouseup="stopSpamming()" ontouchstart="startSpamming()" ontouchend="stopSpamming()">Appuyer ici!</button>
-	<button id="newButton" onclick="window.location.href='../etape5/etape5.html'">Tu as gagné !</button>
+	<button id="newButton" onclick="window.location.href='../etape5/etape5.html'">Continuer</button>
 
 	<script>
 		let gauge = 0;
@@ -50,7 +51,7 @@
 
 		function increaseGauge() {
 			if (gauge < maxGauge) {
-				gauge += 4;
+				gauge += 3;
 				updateGauge();
 			}
 		}
@@ -72,7 +73,7 @@
 
 		function decreaseGauge() {
 			if (!isSpamming && gauge > 0) {
-				gauge -= 2;
+				gauge -= 1;
 				updateGauge();
 			}
 		}

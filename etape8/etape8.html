@@ -27,40 +27,67 @@
     </div>
 
     <script>
-function checkAnswer() {
-    // Récupère la réponse utilisateur, convertit en minuscules, et normalise pour enlever les accents
-    let userAnswer = document.getElementById('userAnswer').value.trim().toLowerCase();
-    
-    // Supprime les accents des lettres
-    userAnswer = userAnswer.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-    let message = '';
-    
-    // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
-    const resultMessage = document.getElementById('resultMessage');
-    const bravoDiv = document.getElementById('Bravo');
-    const nextStepButton = document.getElementById('nextStepButton');
-
-    // Affiche la section #Bravo après toute tentative de réponse
-    bravoDiv.style.display = "block";
-
-    // Vérifie la réponse, en ignorant la casse et les accents
-    if (userAnswer == "cablage") {
-        message = "Parfait vous avez trouvé ce que je cherchais, passons à la suite.";
-        nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
-    } 
-    
-    else if(userAnswer=="cable"||userAnswer=="cables"){
-        message = "Non, il faut utiliser toutes les lettres. Le pauvre G qui n'a rien demandé se fait délaisser et je suis censée ne rien dire ? Eh bien non, je ne suis pas d'accord je suis pour l'intégrité."
-    } else {
-        message = 'Non ce n\'est pas ça, réessaie encore.';
-    }
-
-    // Affiche le message de résultat dans l'élément resultMessage
-    resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
-}
-
-    </script>
+        // Variables de temps pour les indices
+        let firstHintShown = false;
+        let secondHintShown = false;
+        
+        // Fonction pour afficher un indice spécifique
+        function showHint(message) {
+            const hintDiv = document.createElement("div");
+            hintDiv.classList.add("dialogue_text"); // Utilise le style de dialogue_text pour l'apparence de l'indice
+            hintDiv.style.margin = "25px";
+            hintDiv.innerText = message;
+            document.body.appendChild(hintDiv); // Ajoute l'indice dans le corps de la page
+        }
+        
+        // Démarre les temporisateurs pour les indices
+        setTimeout(() => {
+            if (!firstHintShown) {
+                showHint("Indice : Les deux premières lettres sont \"câ\"");
+                firstHintShown = true;
+            }
+        }, 180000); // 3 minutes en millisecondes
+        
+        setTimeout(() => {
+            if (!secondHintShown) {
+                showHint("Indice : Le mot que vous cherchez est câblage");
+                secondHintShown = true;
+            }
+        }, 300000); // 5 minutes en millisecondes
+        
+        function checkAnswer() {
+            // Récupère la réponse utilisateur, convertit en minuscules, et normalise pour enlever les accents
+            let userAnswer = document.getElementById('userAnswer').value.trim().toLowerCase();
+            
+            // Supprime les accents des lettres
+            userAnswer = userAnswer.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        
+            let message = '';
+            
+            // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
+            const resultMessage = document.getElementById('resultMessage');
+            const bravoDiv = document.getElementById('Bravo');
+            const nextStepButton = document.getElementById('nextStepButton');
+        
+            // Affiche la section #Bravo après toute tentative de réponse
+            bravoDiv.style.display = "block";
+        
+            // Vérifie la réponse, en ignorant la casse et les accents
+            if (userAnswer == "cablage") {
+                message = "Parfait vous avez trouvé ce que je cherchais, passons à la suite.";
+                nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
+            } 
+            else if(userAnswer=="cable"||userAnswer=="cables"){
+                message = "Non, il faut utiliser toutes les lettres. Le pauvre G qui n'a rien demandé se fait délaisser et je suis censée ne rien dire ? Eh bien non, je ne suis pas d'accord je suis pour l'intégrité."
+            } else {
+                message = 'Non ce n\'est pas ça, réessaie encore.';
+            }
+        
+            // Affiche le message de résultat dans l'élément resultMessage
+            resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
+        }
+        </script>
+        
     
     
 </body>

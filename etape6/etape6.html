@@ -25,8 +25,7 @@
         </p>
         <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
     </div>
-
-    <!-- Zone de réponse utilisateur -->
+    <p>Pour chaque élément de la liste, déterminez la tension utilisée (Haute Basse et Moyenne), et déplacez-vous sur le tableau en fonction du résultat (Droite, gauche et haut).</p>
     <textarea id="userAnswer" placeholder="Entrez votre réponse ici"></textarea>
     <button onclick="checkAnswer()">Vérifier</button>
 
@@ -37,9 +36,37 @@
     </div>
 
     <script>
+        // Variables pour garder une trace des indices montrés
+        let hintIndex = 0;
+        const hints = [
+            "Indice : Panneaux photovoltaïques = Basse tension",
+            "Indice : Éoliennes offshore = Haute tension",
+            "Indice : Centre commerciaux = Moyenne tension",
+            "Indice : Zones résidentielles = Moyenne tension",
+            "Indice : Turbines à gaz = Haute tension",
+            "Indice : Usines = Haute tension"
+        ];
+        
+        // Fonction pour afficher un indice
+        function showHint() {
+            if (hintIndex < hints.length) {
+                const hintDiv = document.createElement("div");
+                hintDiv.classList.add("dialogue_text"); // Utilise le style de dialogue_text pour l'apparence de l'indice
+                hintDiv.style.marginTop = "25px";
+                hintDiv.innerText = hints[hintIndex];
+                document.body.appendChild(hintDiv); // Ajoute l'indice dans le corps de la page
+                hintIndex++;
+            }
+        }
+        
+        // Affiche les indices à intervalles réguliers
+        for (let i = 1; i <= hints.length; i++) {
+            setTimeout(showHint, i * 50000); // Affiche chaque indice toutes les 50 secondes
+        }
+        
         function checkAnswer() {
             // Récupère la réponse utilisateur (utiliser .value pour obtenir la valeur de la textarea)
-            let userAnswer = document.getElementById('userAnswer').value.trim();  // Obtenir la valeur de la textarea en tant que chaîne et éliminer les espaces
+            let userAnswer = document.getElementById('userAnswer').value.trim();
             let message = '';
             
             // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
@@ -63,9 +90,10 @@
             }
         
             // Affiche le message de résultat dans l'élément resultMessage
-            resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
+            resultMessage.innerHTML = message;
         }
-    </script>
+        </script>
+        
     
     
 </body>

@@ -9,12 +9,12 @@
 </head>
 <body>
     <br>
-    <p style="margin: 30px;">Regardez la forme rigolote dans la boite, combien y a-t-il de triangles au total ? </p>
+    <p style="margin: 30px;"> </p>
     <div class="dialogue">
         <p class="dialogue_text">
-            J’ai pensé à un réseau de cette forme qu’en dites vous ? De toute façon c’est moi qui décide donc il est très bien. J’aurais juste besoin d’aide pour calculer l'énergie nécessaire à ce fonctionnement <br>
+            Quel était le mot caché dans mes imperfections ?<br>
         </p>
-        <img src="../image/eel/eel.png" class="eel-content" alt="Illustration de l'exercice">
+        <img src="../image/eel/eel.png" class="eel-content">
     </div>
 
     <!-- Zone de réponse utilisateur -->
@@ -29,8 +29,12 @@
 
     <script>
         function checkAnswer() {
-            // Récupère la réponse utilisateur (utiliser .value pour obtenir la valeur de la textarea)
-            let userAnswer = document.getElementById('userAnswer').value.trim();  // Obtenir la valeur de la textarea en tant que chaîne et éliminer les espaces
+            // Récupère la réponse utilisateur, convertit en minuscules, et normalise pour enlever les accents
+            let userAnswer = document.getElementById('userAnswer').value.trim().toLowerCase();
+            
+            // Supprime les accents des lettres
+            userAnswer = userAnswer.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            
             let message = '';
             
             // Récupère les éléments HTML pour afficher le résultat et le bouton suivant
@@ -41,20 +45,23 @@
             // Affiche la section #Bravo après toute tentative de réponse
             bravoDiv.style.display = "block";
         
-            // Vérifie si l'entrée est un nombre ou un texte valide
-            if (isNaN(userAnswer)) {
-                message = 'Ooooh, c\'est un chiffre qu\'il nous faut !';
-            } else if (userAnswer === '23') {
-                message = 'Mouais, On dirait que ça a été fait par hasard mais c\'est juste';
+            // Vérifie la réponse en ignorant la casse et les accents
+            if (userAnswer === 'mephistophelique') {
+                message = 'Parfait, J\'ai une proposition pour vous';
                 nextStepButton.style.display = "inline-block"; // Affiche le bouton pour passer à l'étape suivante
+                nextStepButton.onclick = () => window.location.href = '../finfinale/transi-jamel.html'; // Redirige vers la page de succès
             } else {
-                message = 'Non ce n\'est pas ça, réessaie encore.';
+                message = 'Non, c\'est dommage, en le retenant il aurait pu vous être utile.';
+                nextStepButton.style.display = "inline-block"; // Affiche le bouton pour tenter à nouveau
+                nextStepButton.onclick = () => window.location.href = '../fin/transi-jamel.html'; // Redirige vers la page d’échec
             }
         
             // Affiche le message de résultat dans l'élément resultMessage
-            resultMessage.innerHTML = message; // Utilisez innerHTML pour permettre le balisage
+            resultMessage.innerHTML = message;
         }
-    </script>
+        </script>
+        
+        
     
     
 </body>
