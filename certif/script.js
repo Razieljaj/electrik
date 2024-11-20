@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var timer = 1; // Durée du compte à rebours en secondes
+    var timer = 60; // Durée du compte à rebours en secondes
     var countdown = setInterval(function () {
         timer--;
         document.getElementById('timer').textContent = timer; // Mettre à jour l'affichage du timer
